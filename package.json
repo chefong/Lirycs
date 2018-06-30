@@ -6,15 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^3.6.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "passport": "^0.4.0",
-    "passport-spotify": "^1.0.0"
+    "passport-spotify": "^1.0.0",
+    "query-string": "^6.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.17.5"

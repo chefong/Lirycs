@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Button from './components/Button';
+import queryString from 'query-string';
 import './App.css';
 
 class App extends Component {
+
+  componentDidMount() {
+    let token = queryString.parse(window.location.search).access_token;
+    console.log(token);
+    fetch('https://api.spotify.com/v1/me', {
+      headers: {'Authorization': 'Bearer ' + token}
+    }).then(res => res.json())
+    .then(userData => console.log(userData));
+  }
+
   render() {
     return (
       <div className="App">
-        <a href="http://localhost:5000/auth/spotify">
-          <button>Login with spotify</button>
-        </a>
+        <img id="logo" src={ require('./imgs/Lirycs logo.png')} alt="Lirycs logo"/>
+        <br/>
+        <Button/>
       </div>
     );
   }

@@ -1,0 +1,8 @@
+input[type="image"]:focus {
+    outline: none;
+}
+
+#spotify-button {
+  margin-top: 10%;
+  max-width: 20%;
+}
