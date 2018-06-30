@@ -5,16 +5,24 @@ import './App.css';
 
 class App extends Component {
 
+  state = {
+    userData: {
+      id: undefined,
+      country: undefined
+    }
+  }
+
   componentDidMount() {
     let token = queryString.parse(window.location.search).access_token;
-    console.log(token);
+
     fetch('https://api.spotify.com/v1/me', {
       headers: {'Authorization': 'Bearer ' + token}
     }).then(res => res.json())
-    .then(userData => console.log(userData));
+    .then(userData => this.setState({userData}));
   }
 
   render() {
+    console.log(this.state.userData.country);
     return (
       <div className="App">
         <img id="logo" src={ require('./imgs/Lirycs logo.png')} alt="Lirycs logo"/>
