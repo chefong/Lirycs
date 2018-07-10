@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:900');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+
+#greetings {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 8em;
+  text-align: center;
+  color: #ff3300;
+  margin-top: 5%;
+}
+
+#songs {
+  font-size: 2em;
+  font-family: 'Catamaran', sans-serif;
+  color: #878a8e;
+  text-align: center;
+  margin: 2% 0;
+}
+
+.circle {
+  display: table;
+  font-size: 1.25em;
+  width: 15em;
+  height: 15em;
+  background-color: #ff3300;
+  color: white;
+  font-family: 'Catamaran', sans-serif;
+  border-radius: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 0 5%;
+  box-shadow: 10px 10px 50px grey;
+}
+
+.track-name {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#special-circle {
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
