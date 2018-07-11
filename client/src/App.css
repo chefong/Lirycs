@@ -1,12 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|PT+Sans');
 
 .App {
   text-align: center;
 }
 
 #logo {
-  display: inline-block;
-  max-width: 50%;
-  height: auto;
-  margin-top: 20vh;
+  text-align: center;
+  width: 50%;
+  height: 50%;
+  margin-top: 8%;
+}
+
+.logo-container {
+  text-align: center;
+  height: 50%;
+}
+
+.home-container {
+  background-color: white;
+}
+
+#subtitle {
+  font-size: 110%;
+  margin-top: 2%;
+  font-family: 'Bungee Inline', cursive;
+  color: #ff3300;
 }

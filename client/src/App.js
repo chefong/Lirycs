@@ -29,15 +29,25 @@ class App extends Component {
     console.log(this.state.topTracks);
     if ((this.state.userData.display_name || this.state.userData.id) && this.state.topTracks.items) {
       return (
-        <Home userData={ this.state.userData } topTracks={ this.state.topTracks }/>
+        <div className="home-container">
+          <Home userData={ this.state.userData } topTracks={ this.state.topTracks }/>
+        </div>
       );
     }
     else {
       return (
         <div className="App">
-          <img id="logo" src={ require('./imgs/Lirycs logo.png')} alt="Lirycs logo"/>
-          <br/>
-          <Button/>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="logo-container">
+                <img id="logo" src={ require('./imgs/Lirycs logo.png')} alt="Lirycs logo"/>
+                <p id="subtitle">Find out what lyrics you listen to the most on Spotify!</p>
+              </div>
+            </div>
+            <div className="row justify-content-center">
+              <Button/>
+            </div>
+          </div>
         </div>
       );
     }

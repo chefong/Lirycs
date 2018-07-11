@@ -9,18 +9,31 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <h1 id="greetings"><em>Hey { this.props.userData.display_name ? this.getFirstName(this.props.userData.display_name) : this.props.userData.id },</em></h1>
-        <h6 id="songs">Here are your top 3 songs on <span id="spotify-name">Spotify</span>!</h6>
-        <div className="row">
-          <div className="col-4">
-            <div className="circle"><span className="track-name">{ this.props.topTracks.items[0].name }</span></div>
-          </div>
-          <div className="col-4">
-            <div className="circle" id="special-circle"><span className="track-name">{ this.props.topTracks.items[1].name }</span></div>
-          </div>
-          <div className="col-4">
-            <div className="circle"><span className="track-name">{ this.props.topTracks.items[2].name }</span></div>
+      <div>
+        <div className="greetings-container">
+          <h1 id="greetings">Hey { this.props.userData.display_name ? this.getFirstName(this.props.userData.display_name) : this.props.userData.id }<span className="green">,</span></h1>
+        </div>
+        <div className="container-fluid info-container">
+          <p id="songs">Here are your top <span className="green">3</span> tracks on <span className="green">Spotify.</span> Keep scrolling down for more<span className="green">.</span></p>
+          <div className="row">
+            <div className="col-4">
+              <div className="album-art-container">
+                <img className="album-art" src={ this.props.topTracks.items[0].album.images[0].url }/>
+                <h6 className="album-name">{ this.props.topTracks.items[0].name }</h6>
+              </div>
+            </div>
+            <div className="col-4">
+              <div className="album-art-container">
+                <img className="album-art" src={ this.props.topTracks.items[1].album.images[0].url }/>
+                <h6 className="album-name">{ this.props.topTracks.items[1].name }</h6>
+              </div>
+            </div>
+            <div className="col-4">
+              <div className="album-art-container">
+                <img className="album-art" src={ this.props.topTracks.items[2].album.images[0].url }/>
+                <h6 className="album-name">{ this.props.topTracks.items[2].name }</h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>
