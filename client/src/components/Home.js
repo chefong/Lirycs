@@ -3,8 +3,20 @@ import './Home.css';
 
 class Home extends Component {
 
+  trackMap = [];
+
   getFirstName(name) {
     return name.substring(0, name.search(" "))
+  }
+
+  componentDidMount() {
+    console.log("storeTracks being called");
+
+    let arr = this.props.topTracks.items;
+    for (let i = 0; i < arr.length; ++i) {
+      this.trackMap.push([arr[i].name, arr[i].artists[0].name])
+    }
+    console.log(this.trackMap);
   }
 
   render() {
