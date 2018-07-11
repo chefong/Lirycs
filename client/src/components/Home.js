@@ -3,7 +3,9 @@ import './Home.css';
 
 class Home extends Component {
 
-  trackMap = [];
+  state = {
+    trackMap: []
+  }
 
   getFirstName(name) {
     return name.substring(0, name.search(" "))
@@ -13,13 +15,16 @@ class Home extends Component {
     console.log("storeTracks being called");
 
     let arr = this.props.topTracks.items;
+    let trackMap = []
     for (let i = 0; i < arr.length; ++i) {
-      this.trackMap.push([arr[i].name, arr[i].artists[0].name])
+      trackMap.push([arr[i].name, arr[i].artists[0].name])
     }
-    console.log(this.trackMap);
+    console.log(trackMap);
+    this.setState({trackMap})
   }
 
   render() {
+    console.log(this.state.trackMap);
     return (
       <div>
         <div className="greetings-container">
