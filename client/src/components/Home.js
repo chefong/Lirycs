@@ -18,19 +18,19 @@ class Home extends Component {
           <div className="row">
             <div className="col-4">
               <div className="album-art-container">
-                <img className="album-art" src={ this.props.topTracks.items[0].album.images[0].url }/>
+                <a href={ this.props.topTracks.items[0].external_urls.spotify } target="_blank"><img className="album-art" src={ this.props.topTracks.items[0].album.images[0].url }/></a>
                 <h6 className="album-name">{ this.props.topTracks.items[0].name }</h6>
               </div>
             </div>
             <div className="col-4">
               <div className="album-art-container">
-                <img className="album-art" src={ this.props.topTracks.items[1].album.images[0].url }/>
+                <a href={ this.props.topTracks.items[1].external_urls.spotify } target="_blank"><img className="album-art" src={ this.props.topTracks.items[1].album.images[0].url }/></a>
                 <h6 className="album-name">{ this.props.topTracks.items[1].name }</h6>
               </div>
             </div>
             <div className="col-4">
               <div className="album-art-container">
-                <img className="album-art" src={ this.props.topTracks.items[2].album.images[0].url }/>
+                <a href={ this.props.topTracks.items[2].external_urls.spotify } target="_blank"><img className="album-art" src={ this.props.topTracks.items[2].album.images[0].url }/></a>
                 <h6 className="album-name">{ this.props.topTracks.items[2].name }</h6>
               </div>
             </div>
