@@ -26,7 +26,7 @@
 }
 
 .info-container {
-  height: 70vh;
+  height: 150vh;
   background-color: black;
 }
 
@@ -46,5 +46,9 @@
 .album-name {
   margin-top: 5%;
   font-family: 'Lato', sans-serif;
+  color: white;
+}
+
+#lyrics {
   color: white;
 }

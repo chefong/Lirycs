@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './Home.css';
 
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 class Home extends Component {
 
-  topLyrics = "";
+  state = {
+    topLyrics: ""
+  }
 
   chooseGreeting() {
     let date = new Date();
@@ -21,17 +24,42 @@ class Home extends Component {
   componentDidMount() {
     let arr = this.props.topTracks.items;
     let trackMap = [];
-
     for (let i = 0; i < arr.length; ++i) {
       trackMap.push([arr[i].name, arr[i].artists[0].name])
     }
 
-    for (let j = 0; j < trackMap.length; ++j) {
+    console.log(API_KEY);
 
+    // axios.get(`https://cors-anywhere.herokuapp.com/` + `https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?format=json&callback=callback&q_track=${trackMap[0][0]}&q_artist=${trackMap[0][1]}&apikey=${API_KEY}`, {
+    //   headers: { 
+    //     'Accept': 'application/json',
+    //     'Access-Control-Allow-Origin': '*',
+    //     'Access-Control-Allow-Methods' : 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+    //     'Access-Control-Allow-Headers' : 'Content-Type'
+    //   }})
+    //   .then(res => {
+    //     console.log(res);
+    // })
+
+    let topLyrics = "";
+    for (let j = 0; j < trackMap.length; ++j) {
+      let trackTitle = trackMap[j][0];
+      let trackArtist = trackMap[j][1];
+
+      axios.get(`https://cors-anywhere.herokuapp.com/` + `https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?format=json&callback=callback&q_track=${trackTitle}&q_artist=${trackArtist}&apikey=${API_KEY}`)
+        .then(res => {
+          console.log(res);
+          if (res.data.message.body.lyrics) {
+            // console.log(res.data.message.body.lyrics.lyrics_body)
+            topLyrics = topLyrics + res.data.message.body.lyrics.lyrics_body;
+            this.setState({topLyrics});
+          }
+        })
     }
   }
 
   render() {
+    console.log(this.state.topLyrics);
     return (
       <div>
         <div className="greetings-container">
@@ -58,6 +86,9 @@ class Home extends Component {
                 <h6 className="album-name">{ this.props.topTracks.items[2].name }</h6>
               </div>
             </div>
+          </div>
+          <div className="row">
+            <p id="lyrics">{ this.state.topLyrics }</p>
           </div>
         </div>
       </div>

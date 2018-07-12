@@ -26,7 +26,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.topTracks);
     if ((this.state.userData.display_name || this.state.userData.id) && this.state.topTracks.items) {
       return (
         <div className="home-container">
