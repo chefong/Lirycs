@@ -10,7 +10,7 @@
   width: 100%;
   font-family: 'Catamaran', serif;
   font-size: 8em;
-  padding: 4% 0 0 2%;
+  padding: 2% 0 0 2%;
 }
 
 .green {
@@ -18,7 +18,7 @@
 }
 
 #song-desc {
-  margin: 0 4% 2% 4%;
+  margin: 0 1.5% 2% 1.5%;
 }
 
 .subtitle {
@@ -30,7 +30,6 @@
 }
 
 .info-container {
-  height: 165vh;
   background-color: black;
 }
 
@@ -57,11 +56,6 @@
   color: white;
 }
 
-.chart-container {
-  margin: auto;
-  margin-top: 2%;
-}
-
 #chart-desc {
-  margin: 0 5%;
+  margin: 0 2% 2% 2%;
 }
