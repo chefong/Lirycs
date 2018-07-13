@@ -21,7 +21,7 @@
     "passport": "^0.4.0",
     "passport-spotify": "^1.0.0",
     "query-string": "^6.1.0",
-    "zingchart": "^2.7.2"
+    "zingchart-react": "^1.0.6"
   },
   "devDependencies": {
     "nodemon": "^1.17.5"
