@@ -17,7 +17,11 @@
   color: #1db954;
 }
 
-#songs {
+#song-desc {
+  margin: 0 4% 2% 4%;
+}
+
+.subtitle {
   font-size: 2em;
   font-family: 'Catamaran', serif;
   color: white;
@@ -26,7 +30,7 @@
 }
 
 .info-container {
-  height: 150vh;
+  height: 165vh;
   background-color: black;
 }
 
@@ -45,10 +49,19 @@
 
 .album-name {
   margin-top: 5%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Catamaran', serif;
   color: white;
 }
 
 #lyrics {
   color: white;
+}
+
+.chart-container {
+  margin: auto;
+  margin-top: 2%;
+}
+
+#chart-desc {
+  margin: 0 5%;
 }
