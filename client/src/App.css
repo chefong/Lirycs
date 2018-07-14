@@ -4,6 +4,16 @@
   text-align: center;
 }
 
+.background-container {
+  background-image: url('./imgs/bars.png');
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+}
+
 #logo {
   text-align: center;
   width: 50%;
@@ -25,3 +35,9 @@
   margin-top: 2%;
   font-family: 'Bungee Inline', cursive;
 }
+
+/* .background-image-container {
+  height: 100%;
+  background-image: url('imgs/bars.png');
+  background-size: contain;
+} */

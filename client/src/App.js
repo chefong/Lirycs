@@ -36,15 +36,17 @@ class App extends Component {
     else {
       return (
         <div className="App">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="logo-container">
-                <img id="logo" src={ require('./imgs/Lirycs logo.png')} alt="Lirycs logo"/>
-                <p id="subtitle">Find out what lyrics you listen to the most on Spotify!</p>
+          <div className="background-container">
+            <div className="container-fluid">
+              <div className="row">
+                <div className="logo-container">
+                  <img id="logo" src={ require('./imgs/Lirycs logo.png')} alt="Lirycs logo"/>
+                  <p id="subtitle">Find out what lyrics you listen to the most on Spotify!</p>
+                </div>
               </div>
-            </div>
-            <div className="row justify-content-center">
-              <Button/>
+              <div className="row justify-content-center">
+                <Button/>
+              </div>
             </div>
           </div>
         </div>
