@@ -6,6 +6,6 @@
 
 Visit https://lirycs.herokuapp.com to get started.
 
-Login with your Spotify account. Once you're signed in, you can see your most used lyrics in your top Spotify tracks!
+Login with your Spotify account. Once you're signed in, you can see your most used lyrics in your top Spotify tracks in a word clou like below!
 
 ![Lyric word cloud](/client/src/imgs/word-cloud.png)
