@@ -8,7 +8,7 @@ class Button extends Component {
         id="spotify-button" 
         type="image" src={require("../imgs/connect-spotify-button.png")}
         alt="Connect With Spotify"
-        onClick={ () => window.location='http://localhost:5000/auth/spotify'}
+        onClick={ () => window.location='https://lirycs-backend.herokuapp.com/auth/spotify'}
       />
     );
   }
