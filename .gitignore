@@ -20,7 +20,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/config/credentials.js
+/backend/config/credentials.js
 /client/node_modules
 /client/src/components/Sentiment.js
 /client/src/components/Sentiment.css
