@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:900');
+
+.loading-container {
+  background-color: black;
+  text-align: center;
+  height: 100%;
+}
+
+.loading-title {
+  font-family: 'Catamaran', serif;
+  color: white;
+}

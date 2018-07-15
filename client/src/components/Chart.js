@@ -18,7 +18,7 @@ class Chart extends Component {
               type: 'wordcloud',
               options: {
                 text: this.props.lyrics,
-                maxItems: 100,
+                maxItems: 80,
                 aspect: 'spiral',
                 colorType: 'palette',
                 palette: ['#1db954', '#0b6623', '#9dc183', '#c7ea46', '#3f704d', '#00A86B', '#8F9779', '#A9BA9D', '#98FB98', '#01796F', '#D0F0C0', '#00A572', '#4B5320', '#50C878', '#39FF14'],
