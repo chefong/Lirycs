@@ -21,6 +21,7 @@ yarn-debug.log*
 yarn-error.log*
 
 /backend/config/credentials.js
+/client/.env
 /client/node_modules
 /client/src/components/Sentiment.js
 /client/src/components/Sentiment.css
