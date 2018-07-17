@@ -1,6 +1,7 @@
 # Lirycs
 
-*Lirycs* lets you see which lyrics are used the most in your top Spotify tracks.
+*Lirycs* lets you see which lyrics are used the most in your top Spotify tracks.  
+OAuth2 is used to connect to Spotify's Web API and lyric data is grabbed from the Musixmatch Developer API.
 
 ![Lirycs home page](/client/src/imgs/Lirycs-page.png)
 
